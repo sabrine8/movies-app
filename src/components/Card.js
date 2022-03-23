@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function MultiActionAreaCard() {
+  const URLTest = "https://imdb-api.com/en/API/Title/k_xtrgu9mv/tt0110413"
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
