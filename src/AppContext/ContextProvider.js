@@ -4,11 +4,9 @@ import AppContext from './AppContext';
 
 const ContextProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
- 
- 
- 
+   const [searchValue, setSearchValue] = useState('');
  useEffect(() => {
-  getMoviesRequest();
+ getMoviesRequest();
   }, []);
 
   const getMoviesRequest = async () => {

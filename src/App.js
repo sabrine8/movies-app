@@ -1,24 +1,24 @@
-import React, {useState,useEffect,useContext} from 'react';
+import React from 'react';
 import Header from './components/Header';
 import './App.css';
-import SearchBox from './components/SearchBox';
-import MultipleSelect from './components/MultipleSelect';
-import MovieCards from './components/MovieCards';
 
-
+import Home from './pages/Home';
+import { BrowserRouter,Route,Routes } from "react-router-dom";
 import ContextProvider  from "./AppContext/ContextProvider"
-const App = () => {
-  
-  return (<ContextProvider>
+import MovieDetails from './pages/MovieDetails';
 
-      <Header/>
-    
-     <SearchBox/>
-    
-     <MultipleSelect/>
-    <div className='row'>
-      <MovieCards />
-    </div>  
+const App = () => {
+  return (<ContextProvider>
+    <BrowserRouter>
+    <Header />
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="movie" element={<MovieDetails />} />
+    </Routes>
+    </BrowserRouter>
+
+
+ 
 
 
     
