@@ -4,7 +4,7 @@ import AppContext from './AppContext';
 
 const ContextProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
-   const [searchValue, setSearchValue] = useState('');
+ 
  useEffect(() => {
  getMoviesRequest();
   }, []);
@@ -19,10 +19,12 @@ const ContextProvider = ({ children }) => {
       setMovies(responseJson.Search)
     }
   }
+  
 
   const context = {
     movies,
-    setMovies
+    setMovies,
+  
   };
   
   return (<AppContext.Provider value={context}>
